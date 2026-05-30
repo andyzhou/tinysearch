@@ -17,16 +17,16 @@ import (
 
 //service para
 type ServicePara struct {
-	DataPath string
-	RpcPort int //if setup, run as rpc service
-	DictFile string
+	DataPath     string
+	RpcPort      int //if setup, run as rpc service
+	DictFile     string
 	DocQueueMode bool //add doc with queue mode
-	QueueWorkers int //inter worker number
+	QueueWorkers int  //inter worker number
 }
 
 //face info
 type Service struct {
-	manager iface.IManager
+	manager    iface.IManager
 	rpcService iface.IRpcService
 }
 

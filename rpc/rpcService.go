@@ -17,13 +17,13 @@ import (
 
 //face info
 type Service struct {
-	addr string //rpc address
+	addr         string //rpc address
 	docQueueMode bool
 	queueWorkers int
-	rpcCB *CB //rpc service
-	manager iface.IManager //reference
-	listener *net.Listener
-	service *grpc.Server //rpc service
+	rpcCB        *CB            //rpc service
+	manager      iface.IManager //reference
+	listener     *net.Listener
+	service      *grpc.Server //rpc service
 }
 
 //construct

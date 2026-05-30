@@ -24,15 +24,15 @@ const (
 //inter type
 type (
 	GetDocQueueReq struct {
-		In search.DocGetReq
+		In  search.DocGetReq
 		Out chan search.DocGetResp
 	}
-	AddDocQueueReq struct{
-		In search.DocSyncReq
+	AddDocQueueReq struct {
+		In  search.DocSyncReq
 		Out chan search.DocSyncResp
 	}
 	RemoveDocQueueReq struct {
-		In search.DocRemoveReq
+		In  search.DocRemoveReq
 		Out chan search.DocSyncResp
 	}
 )

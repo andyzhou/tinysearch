@@ -19,19 +19,19 @@ import (
 
 //doc sync request
 type DocSyncReq struct {
-	Tag string
-	DocId string
-	DocIds []string
+	Tag      string
+	DocId    string
+	DocIds   []string
 	JsonByte []byte
 	IsRemove bool
 }
 
 //face info
 type Client struct {
-	addr string
-	isActive bool
-	conn *grpc.ClientConn //rpc client connect
-	client *search.SearchServiceClient //rpc client
+	addr      string
+	isActive  bool
+	conn      *grpc.ClientConn            //rpc client connect
+	client    *search.SearchServiceClient //rpc client
 	closeChan chan bool
 	sync.RWMutex
 }

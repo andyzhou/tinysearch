@@ -23,7 +23,7 @@ import (
 
 //suggest record field
 const (
-	SuggestFieldKey = "key"
+	SuggestFieldKey   = "key"
 	SuggestFieldCount = "count"
 )
 
@@ -31,14 +31,14 @@ const (
 type (
 	suggestDocSync struct {
 		indexTag string
-		doc json.SuggestJson
+		doc      json.SuggestJson
 	}
 )
 
 //face info
 type Suggest struct {
 	manager iface.IManager //parent reference
-	queue *lib.Queue
+	queue   *lib.Queue
 	Base
 }
 

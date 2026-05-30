@@ -33,29 +33,29 @@ const (
 type (
 	syncDocReq struct {
 		indexTag string
-		docId string
-		docJson []byte
+		docId    string
+		docJson  []byte
 	}
 	removeDocReq struct {
 		indexTag string
-		docIds []string
+		docIds   []string
 	}
 	getDocReq struct {
 		indexTag string
-		docIds []string
+		docIds   []string
 	}
 	queryDocReq struct {
 		queryKind int
-		indexTag string
-		optJson json.QueryOptJson
+		indexTag  string
+		optJson   json.QueryOptJson
 	}
 )
 
 //face info
 type Client struct {
 	rpcClients map[string]iface.IRpcClient //address -> rpcClient
-	worker *lib.Worker
-	workers int
+	worker     *lib.Worker
+	workers    int
 	sync.RWMutex
 }
 
@@ -312,8 +312,8 @@ func (f *Client) DocSync(
 	//init request
 	req := syncDocReq{
 		indexTag: indexTag,
-		docId: docId,
-		docJson: docJson,
+		docId:    docId,
+		docJson:  docJson,
 	}
 
 	//send to worker queue
